@@ -28,8 +28,11 @@
     var y = window.scrollY;
     if (y > 40) header.classList.add('scrolled'); else header.classList.remove('scrolled');
 
+    // Dock the booking bar under the header on scroll — desktop/tablet only.
+    // On phones a fixed 5-field stack would swallow the screen, so we skip it.
+    var canDock = window.innerWidth > 720;
     if (bar && barWrap) {
-      if (y > barOffset + 20) {
+      if (canDock && y > barOffset + 20) {
         if (!bar.classList.contains('docked')) {
           barWrap.style.height = bar.offsetHeight + 'px';
           bar.classList.add('docked');
@@ -250,6 +253,25 @@
     if (next) next.addEventListener('click', function () { index++; update(); });
     window.addEventListener('resize', update);
     window.addEventListener('load', update);
+
+    // Touch swipe (mobile)
+    var carousel = $('#villaCarousel');
+    if (carousel) {
+      var startX = 0, startY = 0, swiping = false;
+      carousel.addEventListener('touchstart', function (e) {
+        startX = e.touches[0].clientX; startY = e.touches[0].clientY; swiping = true;
+      }, { passive: true });
+      carousel.addEventListener('touchend', function (e) {
+        if (!swiping) return; swiping = false;
+        var dx = e.changedTouches[0].clientX - startX;
+        var dy = e.changedTouches[0].clientY - startY;
+        if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+          index += dx < 0 ? 1 : -1;
+          update();
+        }
+      }, { passive: true });
+    }
+
     update();
   })();
 
