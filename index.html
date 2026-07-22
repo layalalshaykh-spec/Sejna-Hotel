@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SENJA — a jungle sanctuary in Ubud, Bali. Private-pool villas above the Ayung river, a riverside spa, farm-to-table dining, and Balinese rituals at dusk." />
+  <meta name="theme-color" content="#1f3a2e" />
+  <title>SENJA · A Jungle Sanctuary in Ubud, Bali</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <span class="preloader-mark">ᬅ</span>
+      <span class="preloader-name">SENJA</span>
+      <span class="preloader-line"><i></i></span>
+    </div>
+  </div>
+
+  <!-- ============ ANNOUNCEMENT MARQUEE ============ -->
+  <div class="topbar" id="topbar">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>✦ Stay 4 nights, pay 3 · Wellness season</span>
+        <span>✦ Complimentary floating breakfast on arrival</span>
+        <span>✦ Private airport transfer with every villa</span>
+        <span>✦ Ayung river valley · Ubud, Bali</span>
+        <span>✦ Stay 4 nights, pay 3 · Wellness season</span>
+        <span>✦ Complimentary floating breakfast on arrival</span>
+        <span>✦ Private airport transfer with every villa</span>
+        <span>✦ Ayung river valley · Ubud, Bali</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="SENJA home">
+        <span class="brand-mark">ᬅ</span>
+        <span class="brand-name">SENJA</span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Primary">
+        <a href="#villas">Villas</a>
+        <a href="#offers">Offers</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#wellness">Wellness</a>
+        <a href="#dining">Dining</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-switch" id="langSwitch" aria-label="Change language">EN · Rp</button>
+        <a href="#booking" class="btn btn-book header-book">Check Availability</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO (Ken Burns slideshow) ============ -->
+  <section class="hero" id="home">
+    <div class="hero-slides" id="heroSlides" aria-hidden="true">
+      <div class="hero-slide is-active" style="background-image:url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1920&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?auto=format&fit=crop&w=1920&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1920&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1920&q=80')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <p class="eyebrow reveal">Ubud · Bali · Indonesia</p>
+      <h1 class="hero-title reveal">A sanctuary<br />above the river</h1>
+      <p class="hero-sub reveal">Eighteen private-pool villas suspended in the jungle canopy over the Ayung valley — where the day ends slowly, in gold. <em>Senja</em> means dusk.</p>
+      <div class="hero-actions reveal">
+        <a href="#booking" class="btn btn-book">Check Availability</a>
+        <a href="#villas" class="btn btn-ghost">Explore Villas</a>
+      </div>
+    </div>
+
+    <div class="hero-dots" id="heroDots" role="tablist" aria-label="Hero slides"></div>
+    <a href="#ethos" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ============ FLOATING BOOKING BAR ============ -->
+  <div class="bookbar-wrap" id="bookbarWrap">
+    <form class="bookbar container" id="quickBook" aria-label="Quick availability">
+      <div class="bb-field">
+        <label for="bb-in">Arrive</label>
+        <input id="bb-in" type="date" required />
+      </div>
+      <div class="bb-field">
+        <label for="bb-out">Depart</label>
+        <input id="bb-out" type="date" required />
+      </div>
+      <div class="bb-field">
+        <label for="bb-guests">Guests</label>
+        <select id="bb-guests"><option>2 guests</option><option>1 guest</option><option>3 guests</option><option>4 guests</option></select>
+      </div>
+      <div class="bb-field">
+        <label for="bb-villa">Villa</label>
+        <select id="bb-villa"><option>Any villa</option><option>Sawah Pool Villa</option><option>Jungle River Villa</option><option>Valley Canopy Bale</option><option>Waterfall Pool Bale</option><option>Senja Signature Villa</option></select>
+      </div>
+      <button type="submit" class="btn btn-book bb-submit">Check Rates</button>
+    </form>
+  </div>
+
+  <!-- ============ ETHOS / PHILOSOPHY STATEMENT ============ -->
+  <section class="section ethos" id="ethos">
+    <div class="container ethos-inner reveal">
+      <p class="eyebrow">Our philosophy</p>
+      <h2 class="ethos-statement">No rush.<br />No walls between you<br />and the valley.</h2>
+      <p class="ethos-lead">SENJA is built around a single idea — that luxury is space, silence, and time. Open-air <em>bale</em> pavilions dissolve the line between room and rainforest, so the mountains, the river, and the light do the decorating.</p>
+      <a href="#villas" class="link-arrow">Discover the villas →</a>
+    </div>
+  </section>
+
+  <!-- ============ WELCOME / STATS ============ -->
+  <section class="section welcome" id="welcome">
+    <div class="container welcome-grid">
+      <div class="welcome-media reveal">
+        <div class="welcome-img parallax" data-speed="0.15" style="background-image:url('https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&w=1000&q=80')"></div>
+        <div class="welcome-badge">
+          <span class="wb-num">Est.<br>1998</span>
+          <span class="wb-txt">Family-owned · Ubud</span>
+        </div>
+      </div>
+      <div class="welcome-copy reveal">
+        <p class="eyebrow">Selamat datang · Welcome</p>
+        <h2>Where the jungle breathes and the river sings</h2>
+        <p>SENJA was built by hand from volcanic stone and reclaimed ironwood, folded into a terraced hillside above the sacred Ayung. Each villa opens to birdsong and mist; each evening closes with an offering of frangipani and the low sound of the gamelan drifting up the valley.</p>
+        <p>We keep only eighteen villas, so the forest stays louder than the footsteps.</p>
+        <ul class="stats" id="stats">
+          <li><strong data-count="18">0</strong><span>Private-pool villas</span></li>
+          <li><strong data-count="7" data-suffix="ha">0</strong><span>Of jungle gardens</span></li>
+          <li><strong data-count="120" data-suffix="m">0</strong><span>Above the river</span></li>
+          <li><strong data-count="24" data-suffix="/7">0</strong><span>Personal butler</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VILLAS (carousel) ============ -->
+  <section class="section villas" id="villas">
+    <div class="container">
+      <div class="villas-head reveal">
+        <div>
+          <p class="eyebrow">Accommodation</p>
+          <h2>Villas held in the canopy</h2>
+        </div>
+        <div class="carousel-controls">
+          <span class="carousel-count" id="villaCount">01 / 05</span>
+          <button class="car-btn" id="villaPrev" aria-label="Previous villa">‹</button>
+          <button class="car-btn" id="villaNext" aria-label="Next villa">›</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="villa-carousel" id="villaCarousel">
+      <div class="villa-track" id="villaTrack">
+        <article class="villa-card">
+          <div class="villa-img" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80')">
+            <span class="villa-price">from Rp 4.2M<span>/night</span></span>
+          </div>
+          <div class="villa-body">
+            <h3>Sawah Pool Villa</h3>
+            <ul class="spec"><li>2 guests</li><li>King</li><li>65 m²</li><li>Rice-field view</li></ul>
+            <p>A private 8-metre pool facing the terraces, with an open-air stone bath under the frangipani.</p>
+            <div class="villa-cta"><a href="#booking" class="btn btn-ghost dark sm">Check Rates</a><a href="#gallery" class="link-arrow">Details →</a></div>
+          </div>
+        </article>
+
+        <article class="villa-card">
+          <div class="villa-img" style="background-image:url('https://images.unsplash.com/photo-1582610116397-edb318620f90?auto=format&fit=crop&w=900&q=80')">
+            <span class="villa-price">from Rp 6.8M<span>/night</span></span>
+          </div>
+          <div class="villa-body">
+            <h3>Jungle River Villa</h3>
+            <ul class="spec"><li>2 guests</li><li>King</li><li>90 m²</li><li>River view</li></ul>
+            <p>A cantilevered deck and infinity pool over the Ayung gorge — fall asleep to the sound of the water.</p>
+            <div class="villa-cta"><a href="#booking" class="btn btn-ghost dark sm">Check Rates</a><a href="#gallery" class="link-arrow">Details →</a></div>
+          </div>
+        </article>
+
+        <article class="villa-card">
+          <div class="villa-img" style="background-image:url('https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=900&q=80')">
+            <span class="villa-price">from Rp 8.4M<span>/night</span></span>
+          </div>
+          <div class="villa-body">
+            <h3>Valley Canopy Bale</h3>
+            <ul class="spec"><li>3 guests</li><li>King</li><li>110 m²</li><li>Valley panorama</li></ul>
+            <p>An open-air pavilion perched on the ridge, framing the seven peaks as they emerge with the morning light.</p>
+            <div class="villa-cta"><a href="#booking" class="btn btn-ghost dark sm">Check Rates</a><a href="#gallery" class="link-arrow">Details →</a></div>
+          </div>
+        </article>
+
+        <article class="villa-card">
+          <div class="villa-img" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=900&q=80')">
+            <span class="villa-price">from Rp 9.9M<span>/night</span></span>
+          </div>
+          <div class="villa-body">
+            <h3>Waterfall Pool Bale</h3>
+            <ul class="spec"><li>2 guests</li><li>King</li><li>130 m²</li><li>Waterfall front</li></ul>
+            <p>Hidden above a cascade and embraced by rainforest — SENJA's most secluded retreat, for complete privacy.</p>
+            <div class="villa-cta"><a href="#booking" class="btn btn-ghost dark sm">Check Rates</a><a href="#gallery" class="link-arrow">Details →</a></div>
+          </div>
+        </article>
+
+        <article class="villa-card featured">
+          <div class="villa-img" style="background-image:url('https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=900&q=80')">
+            <span class="villa-badge">Signature</span>
+            <span class="villa-price">from Rp 14M<span>/night</span></span>
+          </div>
+          <div class="villa-body">
+            <h3>Senja Signature Villa</h3>
+            <ul class="spec"><li>4 guests</li><li>2 pavilions</li><li>160 m²</li><li>Private spa</li></ul>
+            <p>Two pavilions, a 12-metre pool, a private spa cabana and a dedicated butler — the whole valley, to yourself.</p>
+            <div class="villa-cta"><a href="#booking" class="btn btn-book sm">Check Rates</a><a href="#gallery" class="link-arrow">Details →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OFFERS ============ -->
+  <section class="section offers" id="offers">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Featured Offers</p>
+        <h2>Reasons to stay a little longer</h2>
+      </div>
+      <div class="offer-grid">
+        <article class="offer-card reveal" style="background-image:url('https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800&q=80')">
+          <div class="offer-body">
+            <span class="offer-tag">Stay Longer</span>
+            <h3>Fourth Night Free</h3>
+            <p>Stay four nights, pay for three — the valley rewards those who linger.</p>
+            <a href="#booking" class="link-arrow light">View offer →</a>
+          </div>
+        </article>
+        <article class="offer-card reveal" style="background-image:url('https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=800&q=80')">
+          <div class="offer-body">
+            <span class="offer-tag">Book Early</span>
+            <h3>Advance Purchase · 20% Off</h3>
+            <p>Reserve 60 days ahead and enjoy up to 20% off our villa rate.</p>
+            <a href="#booking" class="link-arrow light">View offer →</a>
+          </div>
+        </article>
+        <article class="offer-card reveal" style="background-image:url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=800&q=80')">
+          <div class="offer-body">
+            <span class="offer-tag">Wellness</span>
+            <h3>Riverside Renewal</h3>
+            <p>Three nights with daily spa rituals, jamu tonics and sunrise yoga.</p>
+            <a href="#booking" class="link-arrow light">View offer →</a>
+          </div>
+        </article>
+        <article class="offer-card reveal" style="background-image:url('https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?auto=format&fit=crop&w=800&q=80')">
+          <div class="offer-body">
+            <span class="offer-tag">For Two</span>
+            <h3>Honeymoon in the Canopy</h3>
+            <p>Floating breakfast, a private dinner above the river, and a couples' ritual.</p>
+            <a href="#booking" class="link-arrow light">View offer →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCES (with duration + price) ============ -->
+  <section class="section experiences" id="experiences">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Discover Ubud</p>
+        <h2>The days you'll remember</h2>
+        <p class="section-lead">Curated by our concierge, rooted in Balinese life. Choose one, or let the valley decide.</p>
+      </div>
+
+      <div class="exp-grid">
+        <article class="exp-card reveal" style="background-image:url('https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=900&q=80')">
+          <div class="exp-body">
+            <span class="exp-meta">3 hours · from Rp 650K</span>
+            <h3>Sunrise Rice-Terrace Trek</h3>
+            <p>Walk the Tegallalang terraces with a farmer before the heat, tea at the top.</p>
+          </div>
+        </article>
+        <article class="exp-card reveal" style="background-image:url('https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=900&q=80')">
+          <div class="exp-body">
+            <span class="exp-meta">2 hours · from Rp 900K</span>
+            <h3>Water Temple Blessing</h3>
+            <p>A Melukat purification ritual at a spring temple with our resident pemangku.</p>
+          </div>
+        </article>
+        <article class="exp-card reveal" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&q=80')">
+          <div class="exp-body">
+            <span class="exp-meta">4 hours · from Rp 750K</span>
+            <h3>Ayung River Rafting</h3>
+            <p>Twelve kilometres of gentle rapids through the jungle gorge below the resort.</p>
+          </div>
+        </article>
+        <article class="exp-card reveal" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80')">
+          <div class="exp-body">
+            <span class="exp-meta">3 hours · from Rp 550K</span>
+            <h3>Garden Cooking Class</h3>
+            <p>Pick from our organic garden, then pound sambal and grill over coconut husk.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WELLNESS (parallax) ============ -->
+  <section class="wellness-parallax" id="wellness">
+    <div class="parallax-bg" data-speed="0.25" style="background-image:url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1600&q=80')"></div>
+    <div class="wellness-overlay"></div>
+    <div class="container wellness-content reveal">
+      <p class="eyebrow light">Wellness</p>
+      <h2>The Riverside Spa</h2>
+      <p>Suspended over the water, our spa draws on centuries of Balinese healing — boreh spice wraps, frangipani oil, and the sound of the Ayung as your only soundtrack. Begin with a jamu tonic; end with tea on the deck.</p>
+      <a href="#booking" class="btn btn-ghost">Book a Ritual</a>
+    </div>
+  </section>
+
+  <!-- ============ DINING ============ -->
+  <section class="section dining" id="dining">
+    <div class="container dining-grid">
+      <div class="dining-copy reveal">
+        <p class="eyebrow">Dining</p>
+        <h2>Warung Senja</h2>
+        <p>Chef Kadek cooks from the resort's own garden and the morning market in Ubud — sambal pounded by hand, fish grilled over coconut husk, rice from the terraces you can see from your table. Dinner arrives as the fireflies do.</p>
+        <ul class="dining-list">
+          <li><span>Breakfast</span> 7:00 – 10:30</li>
+          <li><span>Jamu &amp; Aperitivo</span> 17:00 – 19:00</li>
+          <li><span>Dinner</span> 19:00 – 22:00</li>
+        </ul>
+        <a href="#booking" class="btn btn-ghost dark">Reserve a Table</a>
+      </div>
+      <div class="dining-media reveal">
+        <div class="dining-img" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY (lightbox) ============ -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Gallery</p>
+        <h2>A glimpse of SENJA</h2>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <button class="g-item reveal" data-full="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1600&q=80" style="background-image:url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=700&q=70')" aria-label="Open image"></button>
+        <button class="g-item wide reveal" data-full="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1600&q=80" style="background-image:url('https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1100&q=70')" aria-label="Open image"></button>
+        <button class="g-item reveal" data-full="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=80" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=700&q=70')" aria-label="Open image"></button>
+        <button class="g-item reveal" data-full="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1600&q=80" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=700&q=70')" aria-label="Open image"></button>
+        <button class="g-item reveal" data-full="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1600&q=80" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=700&q=70')" aria-label="Open image"></button>
+        <button class="g-item wide reveal" data-full="https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&w=1600&q=80" style="background-image:url('https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&w=1100&q=70')" aria-label="Open image"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Guest Stories</p>
+        <h2>What lingers, long after</h2>
+      </div>
+      <div class="testi-carousel reveal" id="testiCarousel">
+        <blockquote class="testi is-active">
+          <p>"We came for three nights and rebooked for a week. The floating breakfast, the mist on the pool, the butler who remembered our children's names — SENJA is the kind of quiet you forget exists."</p>
+          <cite>— Amelia &amp; Tomas · Melbourne</cite>
+        </blockquote>
+        <blockquote class="testi">
+          <p>"The water temple blessing moved me to tears. This is not a hotel; it is a place that changes the pace of your heart."</p>
+          <cite>— Priya N. · Singapore</cite>
+        </blockquote>
+        <blockquote class="testi">
+          <p>"Design perfection without a hint of showing off. Stone, wood, water, birdsong. We will spend every anniversary here."</p>
+          <cite>— The Okafors · London</cite>
+        </blockquote>
+        <div class="testi-dots" id="testiDots" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRESS / AWARDS ============ -->
+  <section class="press">
+    <div class="container">
+      <div class="press-row reveal">
+        <div class="press-item"><strong>Condé Nast Traveller</strong><span>Gold List · 2026</span></div>
+        <div class="press-item"><strong>Michelin Key</strong><span>Two Keys · 2025</span></div>
+        <div class="press-item"><strong>Travel + Leisure</strong><span>Best of Bali · 2025</span></div>
+        <div class="press-item"><strong>World Spa Awards</strong><span>Finalist · 2025</span></div>
+        <div class="press-item"><strong>Tatler</strong><span>20 Best Retreats · 2024</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ (accordion) ============ -->
+  <section class="section faq" id="faq">
+    <div class="container faq-inner">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Good to know</p>
+        <h2>Frequently asked</h2>
+      </div>
+      <div class="accordion" id="accordion">
+        <div class="acc-item reveal">
+          <button class="acc-head" aria-expanded="false">What makes SENJA unique?<span class="acc-icon">+</span></button>
+          <div class="acc-panel"><p>Eighteen open-air <em>bale</em> villas, each with its own pool, folded into a working valley above the Ayung river. No two villas share a view, and the forest is never more than a step away.</p></div>
+        </div>
+        <div class="acc-item reveal">
+          <button class="acc-head" aria-expanded="false">Where is SENJA located?<span class="acc-icon">+</span></button>
+          <div class="acc-panel"><p>In Banjar Kedewatan, on the western ridge of Ubud, Bali — about 15 minutes from central Ubud and 75 minutes from Ngurah Rai International Airport (DPS).</p></div>
+        </div>
+        <div class="acc-item reveal">
+          <button class="acc-head" aria-expanded="false">Do all villas have a private pool?<span class="acc-icon">+</span></button>
+          <div class="acc-panel"><p>Yes. Every villa has its own heated private pool, an open-air bath, and a butler on call around the clock.</p></div>
+        </div>
+        <div class="acc-item reveal">
+          <button class="acc-head" aria-expanded="false">Is SENJA suitable for honeymooners?<span class="acc-icon">+</span></button>
+          <div class="acc-panel"><p>Wonderfully so. Our Waterfall and Signature villas are designed for privacy, and the concierge can arrange floating breakfasts, private dinners and couples' rituals.</p></div>
+        </div>
+        <div class="acc-item reveal">
+          <button class="acc-head" aria-expanded="false">Do you provide airport transfers?<span class="acc-icon">+</span></button>
+          <div class="acc-panel"><p>A private air-conditioned transfer is complimentary with every villa booking, in both directions. Simply share your flight details after reserving.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING ============ -->
+  <section class="section booking" id="booking">
+    <div class="container booking-inner reveal">
+      <div class="booking-head">
+        <p class="eyebrow light">Reservations</p>
+        <h2>Begin your stay</h2>
+        <p>Tell us when you'd like to arrive and our concierge will reply within the day.</p>
+      </div>
+      <form class="booking-form" id="bookingForm" novalidate>
+        <div class="field"><label for="bf-name">Full name</label><input id="bf-name" name="name" type="text" required autocomplete="name" /></div>
+        <div class="field"><label for="bf-email">Email</label><input id="bf-email" name="email" type="email" required autocomplete="email" /></div>
+        <div class="field"><label for="bf-checkin">Check in</label><input id="bf-checkin" name="checkin" type="date" required /></div>
+        <div class="field"><label for="bf-checkout">Check out</label><input id="bf-checkout" name="checkout" type="date" required /></div>
+        <div class="field">
+          <label for="bf-guests">Guests</label>
+          <select id="bf-guests" name="guests"><option>1 guest</option><option selected>2 guests</option><option>3 guests</option><option>4 guests</option></select>
+        </div>
+        <div class="field">
+          <label for="bf-villa">Villa</label>
+          <select id="bf-villa" name="villa"><option>Sawah Pool Villa</option><option>Jungle River Villa</option><option>Valley Canopy Bale</option><option>Waterfall Pool Bale</option><option>Senja Signature Villa</option></select>
+        </div>
+        <div class="field field-full"><label for="bf-msg">Anything we should prepare?</label><textarea id="bf-msg" name="message" rows="3" placeholder="Honeymoon, dietary needs, arrival time…"></textarea></div>
+        <div class="field field-full"><button type="submit" class="btn btn-book full">Request Reservation</button></div>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand"><span class="brand-mark">ᬅ</span><span class="brand-name">SENJA</span></a>
+        <p>A jungle sanctuary of eighteen private-pool villas above the Ayung river, in Ubud, Bali.</p>
+        <p class="socials">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="WhatsApp">WhatsApp</a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <p>Banjar Kedewatan<br />Ubud, Gianyar 80571<br />Bali, Indonesia</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>
+          <a href="tel:+62361000000">+62 361 000 000</a><br />
+          <a href="mailto:stay@senja.example">stay@senja.example</a><br />
+          <span class="muted">Check-in 15:00 · Check-out 12:00</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>Slow travel notes, a few times a year.</p>
+        <form class="news-form" id="newsForm">
+          <input type="email" id="newsEmail" placeholder="Your email" aria-label="Email" required />
+          <button type="submit" aria-label="Subscribe">→</button>
+        </form>
+        <span class="news-note" id="newsNote" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <p>© <span id="year"></span> SENJA Ubud. All rights reserved.</p>
+      <p>Crafted with care · Placeholder demo site</p>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <img class="lb-img" id="lbImg" alt="" />
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+  </div>
+
+  <!-- ============ BACK TO TOP ============ -->
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
